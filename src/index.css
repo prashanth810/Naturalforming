@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.veg_home {
+    background-color: hsl(253, 47%, 6%);
+    color: white;
+}
+
+.vegitable_map .vegis:hover {
+    box-shadow: 0px 0px 10px 1px rgb(33 197 94);
+}
+
+.vegitable_map .fruits_images_fruits {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border-width: 5px;
+    border-top-color: green;
+    border-radius: 50%;
+    animation: 2s spin linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.singleproduct_home {
+    background-color: #0b0815;
+}
+
+.underline-animation {
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.underline,
+.spacer-left,
+.spacer-right {
+    height: 100%;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.spacer-left {
+    animation-name: grow-one;
+    background-color: transparent;
+}
+
+.underline {
+    animation-name: grow-two;
+    background-color: rgb(33 197 94);
+}
+
+.spacer-right {
+    animation-name: grow-three;
+    background-color: transparent;
+}
+
+.with-pseudo {
+
+    &::before,
+    &::after {
+        background-color: transparent;
+        content: '';
+        height: 100%;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+    }
+
+    &::before {
+        animation-name: grow-one;
+    }
+
+    &::after {
+        animation-name: grow-three;
+    }
+}
+
+@keyframes grow-one {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes grow-two {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes grow-three {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+.footer_home {
+    background-color: rgb(11, 8, 22);
+    color: white;
+}
